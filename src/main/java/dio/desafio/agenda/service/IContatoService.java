@@ -13,7 +13,7 @@ public interface IContatoService {
 
     Contato mostrarPorId(Long id);
 
-    void adcionarContato(Contato contato);
+    void adicionarContato(Contato contato);
 
     void atualizarContato(Long id, Contato contato);
 

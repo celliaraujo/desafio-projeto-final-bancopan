@@ -30,10 +30,10 @@ public class ContatoServiceImpl implements IContatoService {
     }
 
     @Override
-    public void adcionarContato(Contato contato) {
+    public void adicionarContato(Contato contato) {
         Contato contatoBd = new Contato();
         contatoBd.setNome(contato.getNome());
-        contatoBd.setTelefone(contato.getTelefone());
+        contatoBd.setTelefone(contato.getTelefone().get(0));
         contatoBd.setEndereco(contato.getEndereco());
         contatoRepository.save(contato);
 
@@ -43,7 +43,6 @@ public class ContatoServiceImpl implements IContatoService {
     public void atualizarContato(Long id, Contato contato) {
         Contato contatoBd = contatoRepository.findById(id).get();
         contatoBd.setNome(contato.getNome());
-        contatoBd.setTelefone(contato.getTelefone());
         contatoBd.setEndereco(contato.getEndereco());
         contatoRepository.save(contato);
 
