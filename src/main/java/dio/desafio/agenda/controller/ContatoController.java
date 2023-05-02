@@ -30,7 +30,7 @@ public class ContatoController {
 
     @PostMapping
     public void adcionarContato(@RequestBody Contato contato){
-        service.adcionarContato(contato);
+        service.adicionarContato(contato);
     }
 
     @PutMapping("/{id}")

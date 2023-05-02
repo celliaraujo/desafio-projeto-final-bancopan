@@ -1,0 +1,22 @@
+spring:
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:postgresql://localhost:5432/agenda?useTimezone=true&serverTimezone=UTC&useLegacyDate
+    username: postgres
+    password: 1234
+
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
+
+  logging:
+    level:
+      org:
+        hibernate:
+          type: trace
